@@ -3,13 +3,13 @@ package dbtoapi
 import "github.com/spf13/viper"
 
 type Config struct {
-	databaseType       string
-	databaseServerIP   string
-	databaseServerPort string
-	databaseName       string
-	databaseUsername   string
-	databasePassword   string
-	httpServerPort     string
+	DBType         string
+	DBServerIP     string
+	DBServerPort   string
+	DBName         string
+	DBUsername     string
+	DBPassword     string
+	HttpServerPort string
 }
 
 var conf *Config
@@ -26,12 +26,12 @@ func loadConfig() {
 	checkErr(err)
 
 	conf = &Config{
-		databaseType:       viper.GetString("database.type"),
-		databaseServerIP:   viper.GetString("database.server-ip"),
-		databaseServerPort: viper.GetString("database.server-port"),
-		databaseName:       viper.GetString("database.name"),
-		databaseUsername:   viper.GetString("database.username"),
-		databasePassword:   viper.GetString("database.password"),
-		httpServerPort:     viper.GetString("server.port"),
+		DBType:         viper.GetString("database.type"),
+		DBServerIP:     viper.GetString("database.server-ip"),
+		DBServerPort:   viper.GetString("database.server-port"),
+		DBName:         viper.GetString("database.name"),
+		DBUsername:     viper.GetString("database.username"),
+		DBPassword:     viper.GetString("database.password"),
+		HttpServerPort: viper.GetString("server.port"),
 	}
 }
