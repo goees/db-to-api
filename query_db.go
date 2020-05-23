@@ -44,7 +44,7 @@ func openDB() (*sql.DB, error) {
 	//格式：
 	//[username[:password]@][protocol[(address)]]/dbname[?param1=value1&...&paramN=valueN]
 	//从配置文件读取
-	dataSourceName := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&loc=Local", conf.databaseUsername, conf.databasePassword, conf.databaseServerIP, conf.databaseServerPort, conf.databaseName)
+	dataSourceName := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&loc=Local", conf.DBUsername, conf.DBPassword, conf.DBServerIP, conf.DBServerPort, conf.DBName)
 	db, err := sql.Open("mysql", dataSourceName)
 	return db, err
 }

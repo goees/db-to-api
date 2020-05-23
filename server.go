@@ -13,7 +13,7 @@ func RunServer(config *Config) {
 	conf = config
 	http.HandleFunc("/tables", apiTables())
 	http.HandleFunc("/query", apiQuery())
-	log.Fatal(http.ListenAndServe(":"+conf.httpServerPort, nil))
+	log.Fatal(http.ListenAndServe(":"+conf.HttpServerPort, nil))
 }
 
 //api, "/tables": 查询有哪些表
