@@ -1,0 +1,14 @@
+# 数据库配置，目前只支持mysql
+database:
+  #数据库类型：mysql/oracle/sqlserver
+  type: mysql
+  server-ip: 127.0.0.1
+  server-port: 5258
+  #数据库实例名
+  name: db
+  username: test
+  password: 123123
+
+# http server配置，向外提供api的server
+server:
+  port: 8080
